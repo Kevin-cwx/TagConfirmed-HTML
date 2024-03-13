@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
+<title>Tag Confirmed HTML</title>
+</head>
+<body>
+
+
+<h1>Tag Confirmed</h1>
+<button onclick="DisplayTeamDiv()">Teams</button>
+<button onclick="DisplaySingleDiv()">Single</button>
+<br><br>
+
+
+<!--	<table style="width: 13%;" border="5">
+	<tbody>
+	<tr>
+	<td><b><input type="text" id="Team1" placeholder= "team name 1" class="teamNameInput"> </b></td>
+	<td><b><input type="text" id="Team2" placeholder= "team name 2" class="teamNameInput"> </b></td>
+	</tr>
+	<tr>
+	<td> <input type="text" id="Player1.1" placeholder= "Player name" class="playerNameInput" maxlength="30"> </td>
+	<td> <input type="text" id="Player2.1" placeholder= "Player name" class="playerNameInput" maxlength="30"></td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+	</tbody>
+	</table>
+-->
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<div id="DIVsingle">
+
+single div
+
+</div>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<form method="post" > 
+
+<div id="DIVteam">
+<!-- Final look TEST -->
+<table style="width: 13%;" border="5">
+<tbody>
+
+<tr>
+	<td><b><input type="text" id="Team1" placeholder= "team name 1" class="teamNameInput" maxlength="24" required> </b></td>
+	<td><b><input type="text" id="Team2" placeholder= "team name 2" class="teamNameInput" maxlength="24" required> </b></td>
+</tr>
+
+</tbody>
+</table>
+<!-- END Table header -->
+
+<div class="field_wrapper form-group">
+        <label for="Team" class="col-md-4 control-label">Add Row</label> 
+        <a href="javascript:void(0);" class="add_buttonTeam" title="Add field"><img src="add-icon.png"/></a> <br> 
+</div>
+
+<!-- Input fields-->
+<!-- In Myscript, add row btn starts incrementing at 1.2 -->
+<input type="text" id="Player1.1" placeholder="Player name" class="playerNameInput" maxlength="30">
+<input type="text" id="Player2.1" placeholder="Player name" class="playerNameInput" maxlength="30">
+<br>
+<input type="text" id="Player1.2" placeholder="Player name" class="playerNameInput" maxlength="30" required> <!-- required, that way ppl are forced to use the single button -->
+<input type="text" id="Player2.2" placeholder="Player name" class="playerNameInput" maxlength="30" required>
+<br>
+
+</div><!-- END DIVteam -->
+
+
+<input  class="button" style="vertical-align:middle" Id="StartButton" onclick="StartBtn()"  value="Next"> <!--CSS not working because, css file indicates a span which is not in button -->
+</form>
+<!-- <button class="button"  style="vertical-align:middle" id="StartBtn" onclick="StartBtn()"><span>Next</span></button> --> 
+
+    
+
+
+<script src="MyScript.js"></script>
+</body>
+</html>
